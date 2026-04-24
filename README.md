@@ -7,11 +7,11 @@ A multi-agent system that runs a full trading research pipeline — from raw eco
 Five specialized agents run in sequence. The first three are independent and run in parallel; each downstream agent depends on the output of the previous one.
 
 ```
-macro_agent ──┐
-              ├──→ analyst_agent ──→ strategy_agent
+macro_agent ────────┐
+                    ├──→ analyst_agent ──→ strategy_agent
 market_data_agent ──┤
-              │
-news_agent ───┘
+                    │
+news_agent ─────────┘
 ```
 
 | Agent | Data Source | Output |
