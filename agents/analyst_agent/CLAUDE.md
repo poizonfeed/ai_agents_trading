@@ -52,6 +52,7 @@ any contradictions between the three research sources)
 ```
 
 ## Rules
+- For `{current datetime}`, write the actual current date and time in `YYYY-MM-DD HH:MM` format. Include both date and time.
 - Do not fetch any external data. Only read the three research `.md` files.
 - If any research file is missing or empty, note it explicitly in the report
   and proceed with the available data.

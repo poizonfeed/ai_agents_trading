@@ -53,6 +53,7 @@ that could impact the broader market)
 ```
 
 ## Rules
+- For `{current datetime}`, use Python: `from datetime import datetime; datetime.now().strftime("%Y-%m-%d %H:%M")`. Include both date and time.
 - Never hardcode API keys. Read MARKETAUX_API_KEY from environment (.env file).
 - Focus only on financial/market news, ignore unrelated articles.
 - If fetch_marketaux.py fails or returns no articles, write a report

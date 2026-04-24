@@ -50,6 +50,7 @@ _Generated: {current datetime}_
 ```
 
 ## Rules
+- For `{current datetime}`, use Python: `from datetime import datetime; datetime.now().strftime("%Y-%m-%d %H:%M")`. Include both date and time.
 - Never hardcode API keys. Read FINNHUB_API_KEY from environment (.env file).
 - If fetch_finnhub.py fails or returns partial data, note which tickers
   are unavailable and continue with the rest.

@@ -62,6 +62,7 @@ supports this entry, what must hold true for the trade to work)
 ```
 
 ## Rules
+- For `{current datetime}`, write the actual current date and time in `YYYY-MM-DD HH:MM` format. Include both date and time.
 - Never hardcode prices. Derive all entry, target, and stop prices from the
   data in the analyst report.
 - Position size must reflect confidence score: score 8–10 → up to 10%,

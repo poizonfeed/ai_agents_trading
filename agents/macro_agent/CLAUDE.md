@@ -45,6 +45,7 @@ _Generated: {current datetime}_
 ```
 
 ## Rules
+- For `{current datetime}`, use Python: `from datetime import datetime; datetime.now().strftime("%Y-%m-%d %H:%M")`. Include both date and time.
 - Never hardcode API keys. Read FRED_API_KEY from environment (.env file).
 - If fetch_fred.py fails, log the error and write a report section noting data unavailability.
 - Keep the report concise — it will be read by another agent, not a human.
