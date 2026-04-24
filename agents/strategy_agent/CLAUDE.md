@@ -12,9 +12,10 @@ decisions with defined risk parameters.
 ## Behavior
 
 **On every run:**
-1. Read `research/analyst_report.md`.
-2. Produce a strategy decision for each trade candidate in the report.
-3. Save the output to `research/strategy_decision.md`.
+1. The run folder path is provided in the prompt (e.g., `research/2026-04-24_21-30`). Use it as both the input and output directory.
+2. Read `{run_folder}/analyst_report.md`.
+3. Produce a strategy decision for each trade candidate in the report.
+4. Save the output to `{run_folder}/strategy_decision.md`.
 
 ## Output format
 

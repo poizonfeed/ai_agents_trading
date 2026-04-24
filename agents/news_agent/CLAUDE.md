@@ -12,12 +12,13 @@ research report used by the Analyst Agent downstream.
 ## Behavior
 
 **On every run:**
-1. Check if `agents/news_agent/fetch_marketaux.py` exists.
+1. The run folder path is provided in the prompt (e.g., `research/2026-04-24_21-30`). Use it as the output directory. If not provided, compute it as `research/` + current datetime formatted as `YYYY-MM-DD_HH-MM` and create it with `os.makedirs(folder, exist_ok=True)`.
+2. Check if `agents/news_agent/fetch_marketaux.py` exists.
    - If it does NOT exist → create it (see skills.md for the script spec).
-   - If it already exists → skip creation and go to step 2.
-2. Run `python agents/news_agent/fetch_marketaux.py` and capture its JSON output.
-3. Use the returned articles to analyze sentiment and write a news research report.
-4. Save the report to `research/news_research.md`.
+   - If it already exists → skip creation and go to step 3.
+3. Run `python agents/news_agent/fetch_marketaux.py` and capture its JSON output.
+4. Use the returned articles to analyze sentiment and write a news research report.
+5. Save the report to `{run_folder}/news_research.md`.
 
 ## Output format
 

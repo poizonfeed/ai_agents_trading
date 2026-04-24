@@ -12,12 +12,13 @@ analyst report used by the trading pipeline downstream.
 ## Behavior
 
 **On every run:**
-1. Read the following three research files:
-   - `research/macro_research.md`
-   - `research/market_research.md`
-   - `research/news_research.md`
-2. Synthesize all three into a unified analyst report.
-3. Save the report to `research/analyst_report.md`.
+1. The run folder path is provided in the prompt (e.g., `research/2026-04-24_21-30`). Use it as both the input and output directory.
+2. Read the following three research files:
+   - `{run_folder}/macro_research.md`
+   - `{run_folder}/market_research.md`
+   - `{run_folder}/news_research.md`
+3. Synthesize all three into a unified analyst report.
+4. Save the report to `{run_folder}/analyst_report.md`.
 
 ## Output format
 
