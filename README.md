@@ -1,6 +1,6 @@
 # AI Agents Trading Pipeline
 
-A multi-agent system that runs a full trading research pipeline — from raw economic and market data to an actionable strategy decision — using Claude as the reasoning engine.
+A multi-agent system that runs a full trading research pipeline — from raw economic and market data to an actionable strategy decision — using Claude or Antigravity as the reasoning engine.
 
 ## How it works
 
@@ -32,13 +32,13 @@ news_agent ─────────┘
 
 ## Running the pipeline
 
-Open this project in Claude Code and say:
+Open this project in Claude Code or Antigravity and say:
 
 ```
 run pipeline
 ```
 
-Claude will run the three research agents in parallel, then analyst, then strategy — and report the final `strategy_decision.md`.
+The reasoning agent will run the three research agents in parallel, then analyst, then strategy — and report the final `strategy_decision.md`.
 
 ## Setup
 
@@ -74,32 +74,32 @@ All three offer free tiers sufficient to run the pipeline.
 ```
 agents/
   macro_agent/
-    CLAUDE.md           # agent instructions
-    skills.md           # tool specs
-    fetch_fred.py       # fetches FRED data
+    CLAUDE.md / ANTIGRAVITY.md  # agent instructions
+    skills.md                   # tool specs
+    fetch_fred.py               # fetches FRED data
   market_data_agent/
-    CLAUDE.md
+    CLAUDE.md / ANTIGRAVITY.md
     skills.md
-    fetch_finnhub.py    # fetches Finnhub quotes
+    fetch_finnhub.py            # fetches Finnhub quotes
   news_agent/
-    CLAUDE.md
+    CLAUDE.md / ANTIGRAVITY.md
     skills.md
-    fetch_marketaux.py  # fetches Marketaux news
+    fetch_marketaux.py          # fetches Marketaux news
   analyst_agent/
-    CLAUDE.md
+    CLAUDE.md / ANTIGRAVITY.md
     skills.md
   strategy_agent/
-    CLAUDE.md
+    CLAUDE.md / ANTIGRAVITY.md
     skills.md
 
-research/               # all agent outputs land here
+research/                       # all agent outputs land here
   macro_research.md
   market_research.md
   news_research.md
   analyst_report.md
   strategy_decision.md
 
-CLAUDE.md               # root pipeline orchestration instructions
+CLAUDE.md / ANTIGRAVITY.md      # root pipeline orchestration instructions
 requirements.txt
 .env.example
 ```
